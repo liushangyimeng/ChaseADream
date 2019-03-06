@@ -1,0 +1,35 @@
+-------创建数据库
+create database dream charset=utf8;
+set names=utf8;
+use dream;
+DROP TABLE IF EXISTS `shop`;
+CREATE TABLE IF NOT EXISTS `shop` (
+     id   INT(1) NOT NULL AUTO_INCREMENT ,
+  `account` char(30) COLLATE utf8_bin NOT NULL,
+  `password` char(15) COLLATE utf8_bin NOT NULL,
+  `name` char(15) COLLATE utf8_bin NOT NULL,
+  `telephone` char(20) COLLATE utf8_bin NOT NULL,
+  `email` char(20) COLLATE utf8_bin NOT NULL,
+  `comment` varchar(200) COLLATE utf8_bin NOT NULL,
+  description varchar(250) default NULL,
+  bin_data longblob,
+  filename varchar(50) default NULL,
+  filesize varchar(50) default NULL,
+  filetype varchar(50) default NULL,
+  `flag` char(5) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY(id)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+use dream;
+DROP TABLE IF EXISTS `student`;
+CREATE TABLE IF NOT EXISTS `student` (
+     id   INT(1) NOT NULL AUTO_INCREMENT ,
+  `account` char(30) COLLATE utf8_bin NOT NULL,
+  `password` char(15) COLLATE utf8_bin NOT NULL,
+  `name` char(15) COLLATE utf8_bin NOT NULL,
+  `telephone` char(20) COLLATE utf8_bin NOT NULL,
+  `email` char(20) COLLATE utf8_bin NOT NULL,
+  `comment` varchar(200) COLLATE utf8_bin NOT NULL,
+  `flag` char(5) COLLATE utf8_bin NOT NULL,
+  `time` varchar(200) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY(id)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
